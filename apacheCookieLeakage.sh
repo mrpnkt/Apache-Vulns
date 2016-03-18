@@ -41,18 +41,15 @@ done
 printf "Type the target followed by [ENTER]: "
 read target # Get the users input
 
-
 # To exploit this vulnerability we need to provide long cookie values so generate 1000 characters
 cookieValue=$(for i in {1..1000}; do printf x; done)
 cookie=""
-
 
 # Generate a string which contains 10 cookies with the cookie value generated above
 for i in {1..10};
 do
 	cookie="${cookie}TEST${i}=${cookieValue};"
 done
-
 
 # Check if the input starts with http:// or https:// and if protocol is not specified assume http://
 if [[ ${target} != "http://"* ]] && [[ ${target} != "https://"* ]]
@@ -61,17 +58,14 @@ then
 	target="http://${target}"
 fi
 
-
 # Store the response of the curl command so we can check if the cookies sent are reflected in the response
 response=$(curl -ski --connect-timeout 10 ${target} -H "Cookie: ${cookie}")
-
 
 # If the user provided the -s argument, print the curl output
 if [[ ${output} == true ]]
 then
     printf "\n%s\n" "${response}"
 fi
-
 
 # If the cookies sent are reflected in the response, the target is vulnerable
 if [[ ${response} == *"TEST"*"="* ]]
@@ -80,7 +74,6 @@ then
 else
     printf "\nThe server is ${GREEN}${BOLD}NOT vulnerable${RESET}.\n"
 fi
-
 
 # Calculate and print script's running time
 end=`date +%s`
