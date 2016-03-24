@@ -7,7 +7,11 @@ Pentest Scripts for Apache Vulnerabilities.
   
   * TODO:
     - [ ] Add option to check which versions are affected by a particular CVE-ID.
+    - [ ] Add support for more versions.
     - [ ] Add option that will probe a target in an attempt to get its banner.
+    - [ ] Add active tests in an attempt to fingerprint the targets' version.
+      - [ ] e.g., CVE-2012-0053 httpOnly Cookie Disclosure, byterange DoS, etc.
+      - [ ] Add functionality to search for default files that may disclose the version.
     - [ ] Update the apache_CVE.txt file to include if public exploits are available, and the risk rating of each CVE-ID.
     - [ ] Improve code quality
 
