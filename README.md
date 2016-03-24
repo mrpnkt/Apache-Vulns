@@ -3,7 +3,7 @@ Pentest Scripts for Apache Vulnerabilities.
 
 
 1. **apacheScan.py**
-  * The purpose of this script is to enable pentesters to quickly check which CVE-IDs apply to a particular Apache version. apacheScan comes with a text file which contains all CVE-IDs taken from [https://httpd.apache.org] (https://httpd.apache.org). The python script simply retrieves the CVE-IDs that apply to the given Apache version from the apache_CVE.txt file.
+  * The purpose of this script is to enable pentesters to quickly check which CVE-IDs apply to a particular Apache version. apacheScan comes with a text file which contains all CVE-IDs taken from [https://httpd.apache.org] (https://httpd.apache.org). The python script simply retrieves the CVE-IDs that apply to the given Apache version from the apache_CVE.txt file. It currently supports Apache version _2.2.\*_ and _2.4.\*_.
   
   * TODO:
     - [ ] Add option to check which versions are affected by a particular CVE-ID.
