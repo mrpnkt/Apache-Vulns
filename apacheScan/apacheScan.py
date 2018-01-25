@@ -52,6 +52,7 @@ def main():
             print '[-] ' + filename + 'access denied.'
             exit(0)
         checkVulns(version, filename)
+        print bcolors.ENDC
     else:
         print '\nUsage:'
         print '\tpython apacheScan.py [version]'
