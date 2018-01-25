@@ -36,7 +36,7 @@ def checkVulns(banner, filename):
         print bcolors.SUCCESS + bcolors.BOLD + '\n[+]' + bcolors.ENDC + ' Found' + bcolors.FAIL + bcolors.BOLD, len(vulns), bcolors.ENDC + varVuln,
         print bcolors.SUCCESS + bcolors.BOLD + '\n[+]' + bcolors.ENDC + ' Apache ' + bcolors.NEUTRAL + bcolors.BOLD + banner + bcolors.ENDC + ' is vulnerable to the following:'
         print bcolors.FAIL + "".join(vulns)
-        print bcolors.ENDC ""
+        print bcolors.ENDC
     else:
         print bcolors.FAIL + bcolors.BOLD + '\n[-]' + bcolors.ENDC + ' I am sorry but we could\'t find any vulnerabilities in our database for ' + bcolors.NEUTRAL + bcolors.BOLD + 'Apache ' + banner + bcolors.ENDC + '.'
 
